@@ -37,10 +37,10 @@ module stack #(
   wire [4 * log2(max_entries) - 1 : 0] RAddr;
   wire [4 * value_size - 1 : 0] RData;
 
-  assign Wenb = {wrt_en_3, wrt_en_2, wrt_en_1, wrt_en_0};
-  assign WAddr = {wrt_add_3, wrt_add_2, wrt_add_1, wrt_add_0};
-  assign WData = {data_in_3, data_in_2, data_in_1, data_in_0};
-  assign RAddr = {read_add_3, read_add_2, read_add_1, read_add_0};
+  assign Wenb = {wrt_en_0, wrt_en_1, wrt_en_2, wrt_en_3};
+  assign WAddr = {wrt_add_0, wrt_add_1, wrt_add_2, wrt_add_3};
+  assign WData = {data_in_0, data_in_1, data_in_2, data_in_3};
+  assign RAddr = {read_add_0, read_add_1, read_add_2, read_add_3};
   
   mpram_lvt #(.MEMD(max_entries),
               .DATAW(value_size),
@@ -55,9 +55,9 @@ module stack #(
                .RAddr(RAddr),
                .RData(RData));
   
-  assign data_out_0 = RData[0 * value_size +: value_size];
-  assign data_out_1 = RData[1 * value_size +: value_size];
-  assign data_out_2 = RData[2 * value_size +: value_size];
-  assign data_out_3 = RData[3 * value_size +: value_size];
+  assign data_out_0 = RData[3 * value_size +: value_size];
+  assign data_out_1 = RData[2 * value_size +: value_size];
+  assign data_out_2 = RData[1 * value_size +: value_size];
+  assign data_out_3 = RData[0 * value_size +: value_size];
 
 endmodule
