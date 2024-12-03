@@ -1,7 +1,7 @@
 module dpram
  #(  parameter MEMD = 16,
      parameter DATAW = 32,
-	 parameter BYPASS = 1,
+     parameter BYPASS = 1,
      parameter IZERO = 0,
      parameter IFILE = ""
   )( input clk,
@@ -44,7 +44,7 @@ module dpram
 
   always @*
     if (bypass2) begin
-	  RData = WData;
+      RData = WData;
     end
     else if (bypass1) begin
       RData = WData_r;
