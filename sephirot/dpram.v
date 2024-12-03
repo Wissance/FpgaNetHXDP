@@ -1,3 +1,5 @@
+`include "clog2_function.vh"
+
 module dpram
  #(  parameter MEMD = 16,
      parameter DATAW = 32,
@@ -6,9 +8,9 @@ module dpram
      parameter IFILE = ""
   )( input clk,
      input WEnb,
-     input [`log2(MEMD) - 1:0] WAddr,
+     input [$clog2(MEMD) - 1:0] WAddr,
      input [DATAW - 1:0] WData,
-     input [`log2(MEMD) - 1:0] RAddr,
+     input [$clog2(MEMD) - 1:0] RAddr,
      output reg [DATAW - 1:0] RData
   );
 
@@ -27,8 +29,8 @@ module dpram
               .RData(RData_i));
 
   reg WEnb_r;
-  reg [`log2(MEMD) - 1 : 0] WAddr_r;
-  reg [`log2(MEMD) - 1 : 0] RAddr_r;
+  reg [$clog2(MEMD) - 1 : 0] WAddr_r;
+  reg [$clog2(MEMD) - 1 : 0] RAddr_r;
   reg [DATAW - 1 : 0] WData_r;
   
   always @(posedge clk) begin

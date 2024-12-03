@@ -1,3 +1,5 @@
+`include "clog2_function.vh"
+
 module stack #(
   parameter value_size = 64,
   parameter max_entries = 64)
@@ -32,9 +34,9 @@ module stack #(
 );
 
   wire [3 : 0] Wenb;
-  wire [4 * log2(max_entries) - 1 : 0] WAddr;
+  wire [4 * $clog2(max_entries) - 1 : 0] WAddr;
   wire [4 * value_size - 1 : 0] WData;
-  wire [4 * log2(max_entries) - 1 : 0] RAddr;
+  wire [4 * $clog2(max_entries) - 1 : 0] RAddr;
   wire [4 * value_size - 1 : 0] RData;
 
   assign Wenb = {wrt_en_0, wrt_en_1, wrt_en_2, wrt_en_3};

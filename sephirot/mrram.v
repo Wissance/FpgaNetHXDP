@@ -1,3 +1,5 @@
+`include "clog2_function.vh"
+
 module mrram
  #(  parameter MEMD = 16,
      parameter DATAW = 32,
@@ -7,9 +9,9 @@ module mrram
      parameter IFILE = ""
   )( input clk,
      input WEnb,
-     input [`log2(MEMD) - 1 : 0] WAddr,
+     input [$clog2(MEMD) - 1 : 0] WAddr,
      input [DATAW - 1 : 0] WData,
-     input [`log2(MEMD) * nRPORTS - 1 : 0] RAddr,
+     input [$clog2(MEMD) * nRPORTS - 1 : 0] RAddr,
      output reg [DATAW * nRPORTS - 1 : 0] RData);
 
   localparam ADDRW = `log2(MEMD);

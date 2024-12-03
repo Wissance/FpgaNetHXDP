@@ -1,3 +1,5 @@
+`include "clog2_function.vh"
+
 module mpram_lvt
  #(  parameter MEMD = 16,
      parameter DATAW = 32,
@@ -7,13 +9,13 @@ module mpram_lvt
      parameter IFILE = ""
   )( input clk  ,
      input [nWPORTS - 1 : 0] WEnb,
-     input [`log2(MEMD) * nWPORTS - 1 : 0] WAddr,
+     input [$clog2(MEMD) * nWPORTS - 1 : 0] WAddr,
      input [DATAW * nWPORTS - 1 : 0] WData,
-     input [`log2(MEMD) * nRPORTS - 1 : 0] RAddr,
+     input [$clog2(MEMD) * nRPORTS - 1 : 0] RAddr,
      output reg [DATAW * nRPORTS - 1 : 0] RData);
 
-  localparam ADDRW = `log2(MEMD);
-  localparam LVTW  = `log2(nWPORTS);
+  localparam ADDRW = $clog2(MEMD);
+  localparam LVTW  = $clog2(nWPORTS);
 
   wire [DATAW * nRPORTS * nWPORTS - 1 : 0] RDatai;
   wire [LVTW * nRPORTS  - 1 : 0] RBank;

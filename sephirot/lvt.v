@@ -1,3 +1,5 @@
+`include "clog2_function.vh"
+
 module lvt
 #(
   parameter MEMD = 16,
@@ -10,13 +12,13 @@ module lvt
 (
   input clk,
   input [nWPORTS - 1 : 0] WEnb,
-  input [`log2(MEMD) * nWPORTS - 1 : 0] WAddr,
-  input [`log2(MEMD) * nRPORTS - 1 : 0] RAddr,
-  output [`log2(nWPORTS) * nRPORTS - 1 : 0] RBank
+  input [$clog2(MEMD) * nWPORTS - 1 : 0] WAddr,
+  input [$clog2(MEMD) * nRPORTS - 1 : 0] RAddr,
+  output [$clog2(nWPORTS) * nRPORTS - 1 : 0] RBank
 );
 
-  localparam ADDRW = `log2(MEMD);
-  localparam LVTW  = `log2(nWPORTS);
+  localparam ADDRW = $clog2(MEMD);
+  localparam LVTW = $clog2(nWPORTS);
 
   reg [LVTW * nWPORTS - 1 : 0] WData;
   integer i;
