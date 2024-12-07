@@ -1,0 +1,40 @@
+{
+	"version": "1.0",
+	"modules": {
+		"bd_7ad4": {
+			"proto_instances": {
+				"/xmac/m_axis_rx": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "rx_clk0"},
+						"TDATA": { "actual": "rx_axis_tdata"},
+						"TKEEP": { "actual": "rx_axis_tkeep"},
+						"TLAST": { "actual": "rx_axis_tlast"},
+						"TUSER": { "actual": "rx_axis_tuser"},
+						"TVALID": { "actual": "rx_axis_tvalid"}
+					}
+				},
+				"/xmac/s_axis_pause": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "tx_clk0"},
+						"TDATA": { "actual": "pause_val"},
+						"TVALID": { "actual": "pause_req"}
+					}
+				},
+				"/xmac/s_axis_tx": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "tx_clk0"},
+						"TDATA": { "actual": "tx_axis_tdata"},
+						"TKEEP": { "actual": "tx_axis_tkeep"},
+						"TLAST": { "actual": "tx_axis_tlast"},
+						"TREADY": { "actual": "tx_axis_tready"},
+						"TUSER": { "actual": "tx_axis_tuser"},
+						"TVALID": { "actual": "tx_axis_tvalid"}
+					}
+				}
+			}
+		}
+	}
+}
