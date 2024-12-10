@@ -501,11 +501,11 @@ module exe_stage_noctrl (
     end
 
     if (exe_address_dst == wb_reg_add_s) begin
-        exe_operand_dst_s = exe_result_s;
-        $display("DST FORWARDED");
+      exe_operand_dst_s = exe_result_s;
+      $display("DST FORWARDED");
     end
     else begin
-        exe_operand_dst_s = exe_operand_dst;
+      exe_operand_dst_s = exe_operand_dst;
     end
   end
 
