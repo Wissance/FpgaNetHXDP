@@ -1,3 +1,5 @@
+`include "common.vh"
+
 module exe_stage_noctrl (
   parameter QUEUES_PAGE = 4'b0000,
   input wire clk,
