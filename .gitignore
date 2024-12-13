@@ -398,5 +398,6 @@ FodyWeavers.xsd
 *.sln.iml
 
 src/NetHxdp/NetHxdp.runs/synth_1/
+src/NetHxdp/NetHxdp.sim/sim_1/
 
 src/NetHxdp/NetHxdp.cache/
