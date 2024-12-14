@@ -1,0 +1,53 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
+#  -string -flagsOSRD
+preplace port axi_lite_aresetn -pg 1 -y 260 -defaultsOSRD
+preplace port sys_reset -pg 1 -y 90 -defaultsOSRD
+preplace port axis_datapath_aresetn -pg 1 -y 300 -defaultsOSRD
+preplace port M07_AXI -pg 1 -y 480 -defaultsOSRD
+preplace port M06_AXI -pg 1 -y 460 -defaultsOSRD
+preplace port m_axis_dma_tx -pg 1 -y 500 -defaultsOSRD
+preplace port M01_AXI -pg 1 -y 380 -defaultsOSRD
+preplace port iic_fpga -pg 1 -y 50 -defaultsOSRD
+preplace port M04_AXI -pg 1 -y 420 -defaultsOSRD
+preplace port sys_clk -pg 1 -y 110 -defaultsOSRD
+preplace port uart -pg 1 -y 70 -defaultsOSRD
+preplace port s_axis_dma_rx -pg 1 -y 200 -defaultsOSRD
+preplace port M03_AXI -pg 1 -y 400 -defaultsOSRD
+preplace port M02_AXI -pg 1 -y 540 -defaultsOSRD
+preplace port M05_AXI -pg 1 -y 440 -defaultsOSRD
+preplace port axi_lite_aclk -pg 1 -y 240 -defaultsOSRD
+preplace port clk_100 -pg 1 -y 130 -defaultsOSRD
+preplace port axis_datapath_aclk -pg 1 -y 280 -defaultsOSRD
+preplace port pcie_7x_mgt -pg 1 -y 520 -defaultsOSRD
+preplace port M00_AXI -pg 1 -y 360 -defaultsOSRD
+preplace portBus aresetn_clk_100 -pg 1 -y 150 -defaultsOSRD
+preplace portBus iic_reset -pg 1 -y 110 -defaultsOSRD
+preplace inst nf_mbsys -pg 1 -lvl 1 -y 280 -defaultsOSRD
+preplace inst dma_sub -pg 1 -lvl 2 -y 640 -defaultsOSRD
+preplace netloc dma_sub_pcie_7x_mgt 1 2 2 NJ 520 NJ
+preplace netloc dma_sub_M07_AXI 1 2 2 NJ 480 NJ
+preplace netloc axis_datapath_aclk_1 1 0 2 NJ 380 410
+preplace netloc dma_sub_M04_AXI 1 2 2 870 420 NJ
+preplace netloc dma_sub_M00_AXI 1 2 2 840 360 NJ
+preplace netloc dma_sub_M06_AXI 1 2 2 NJ 460 NJ
+preplace netloc nf_mbsys_M04_AXI 1 1 1 450
+preplace netloc sys_reset_1 1 0 2 40 460 380
+preplace netloc dma_sub_M03_AXI 1 2 2 860 400 NJ
+preplace netloc axi_lite_aclk_1 1 0 2 NJ 420 420
+preplace netloc nf_mbsys_aresetn_clk_100 1 1 3 440 150 NJ 150 NJ
+preplace netloc nf_mbsys_clk_100 1 1 3 430 130 NJ 130 NJ
+preplace netloc sys_clk_1 1 0 2 70 440 400
+preplace netloc dma_sub_M05_AXI 1 2 2 NJ 440 NJ
+preplace netloc s_axis_dma_rx_1 1 0 2 NJ 170 460
+preplace netloc nf_mbsys_iic_fpga 1 1 3 NJ 50 NJ 50 NJ
+preplace netloc dma_sub_M01_AXI 1 2 2 850 380 NJ
+preplace netloc dma_sub_M02_AXI 1 2 2 930 540 NJ
+preplace netloc nf_mbsys_iic_reset 1 1 3 NJ 110 NJ 110 NJ
+preplace netloc nf_mbsys_uart 1 1 3 NJ 70 NJ 70 NJ
+preplace netloc axi_lite_aresetn_1 1 0 2 NJ 450 N
+preplace netloc dma_sub_m_axis_dma_tx 1 2 2 NJ 500 NJ
+preplace netloc axis_datapath_aresetn_1 1 0 2 NJ 410 390
+levelinfo -pg 1 0 260 680 950 1060 -top 0 -bot 940
+",
+}
