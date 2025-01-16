@@ -1,0 +1,35 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
+#  -string -flagsOSRD
+preplace port M07_AXI -pg 1 -y 280 -defaultsOSRD
+preplace port axi_lite_areset -pg 1 -y 180 -defaultsOSRD
+preplace port core_clk -pg 1 -y 200 -defaultsOSRD
+preplace port S00_AXI -pg 1 -y 140 -defaultsOSRD
+preplace port M06_AXI -pg 1 -y 260 -defaultsOSRD
+preplace port core_resetn -pg 1 -y 220 -defaultsOSRD
+preplace port M01_AXI -pg 1 -y 160 -defaultsOSRD
+preplace port M04_AXI -pg 1 -y 220 -defaultsOSRD
+preplace port M03_AXI -pg 1 -y 200 -defaultsOSRD
+preplace port M05_AXI -pg 1 -y 240 -defaultsOSRD
+preplace port M02_AXI -pg 1 -y 180 -defaultsOSRD
+preplace port axi_lite_aclk -pg 1 -y 160 -defaultsOSRD
+preplace port M00_AXI -pg 1 -y 140 -defaultsOSRD
+preplace inst axi_clock_converter_0 -pg 1 -lvl 1 -y 180 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -y 510 -defaultsOSRD
+preplace netloc axi_lite_areset_1 1 0 1 N
+preplace netloc axi_interconnect_0_M02_AXI 1 1 2 360 180 NJ
+preplace netloc core_clk_1 1 0 1 20
+preplace netloc axi_lite_aclk_1 1 0 1 N
+preplace netloc axi_interconnect_0_M07_AXI 1 1 2 410 280 NJ
+preplace netloc core_resetn_1 1 0 1 10
+preplace netloc axi_interconnect_0_M04_AXI 1 1 2 380 220 NJ
+preplace netloc S00_AXI_1 1 0 1 N
+preplace netloc axi_interconnect_0_M05_AXI 1 1 2 390 240 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 1 2 340 140 NJ
+preplace netloc axi_clock_converter_0_M_AXI 1 0 2 30 90 330
+preplace netloc axi_interconnect_0_M01_AXI 1 1 2 350 160 NJ
+preplace netloc axi_interconnect_0_M06_AXI 1 1 2 400 260 NJ
+preplace netloc axi_interconnect_0_M03_AXI 1 1 2 370 200 NJ
+levelinfo -pg 1 -10 180 430 470 -top 0 -bot 770
+",
+}
